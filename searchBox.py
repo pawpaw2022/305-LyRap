@@ -16,18 +16,19 @@ SearchBox is a superclass that contains:
     4. setName()
     5. __str__() 
 '''
+from abc import abstractmethod
 import json_test
 
-class searchBox(object):
+class SearchBox(object):
     def __init__(self, name:str) -> None:
         self.name = name
         self.result = []
         self.criteria = "DEFAULT" # title, lyrics, artist.
         
-
+    @abstractmethod
     def search(self, keyword:str) -> list: 
         for song in json_test.song_db: 
-            if keyword in song[self.critical]:
+            if keyword in song[self.criteria]:
                 self.result.append(f"{song['title']} - {song['artist']}")
                 return "Result has been found !!!"
     
