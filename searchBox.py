@@ -1,49 +1,41 @@
-'''
-SearchBox is a superclass that contains: 
-    dataField: 
-    1. name: str
-    2. result: list of dict
-        [{
-            artist: Dua Lipa
-            songName: 
-            Lyric: 
-        }, ...
-        ]
-    function:
-    1. search() 
-    2. getResult()
-    3. getName()
-    4. setName()
-    5. __str__() 
-'''
+"""
+DESCRIPTION: SearchBox is a abstract superclass which provides a 
+blueprint for subsequent sublclasses that inherit its functionality.
+
+AUTHORS: Paul Sining Lu, Grace Gresli, Aidan Pearce, Bruce Tukuafu
+
+LAST UPDATE: 04/22/22
+    
+Functions:
+1. search() 
+2. getLyrics()
+3. getArtist()
+4. getTitle()
+5. __str__() 
+"""
+# imported libraries
 from abc import abstractmethod
-import json_test
 
 class SearchBox(object):
     def __init__(self, name:str) -> None:
         self.name = name
-        self.result = []
-        self.criteria = "DEFAULT" # title, lyrics, artist.
+
+    @abstractmethod
+    def search(self, keyword:str): 
+        pass
         
     @abstractmethod
-    def search(self, keyword:str) -> list: 
-        for song in json_test.song_db: 
-            if keyword in song[self.criteria]:
-                self.result.append(f"{song['title']} - {song['artist']}")
-                return "Result has been found !!!"
+    def getLyrics(self, keyword:str):
+        pass
     
-        return "No result matched."
-        
+    @abstractmethod
+    def getArtist(self, keyword:str):
+        pass
 
-    def getResult(self) -> list:
-        return self.result
-
-    def getName(self) -> str:
-        return self.name
-
-    def setName(self,name) -> None:
-        self.name = name
+    @abstractmethod
+    def getTitle(self, keyword:str) -> str:
+        pass
 
     def __str__(self) -> str:
-        return f" This is a {self.criteria} search Box, its name is {self.getName()}, currently it has found {len(self.result)} results."
+        return f" This is a General Search Box, and the phrase you entered is {self.name}"
 
