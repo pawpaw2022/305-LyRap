@@ -1,7 +1,7 @@
 """
 DESCRIPTION:
 
-AUTHORS: Paul Sining Lu
+AUTHORS: Aidan Pearce
 
 LAST UPDATE:
 
@@ -10,32 +10,35 @@ Class Variables:
 2. genius_object -> instantiation of genius object which allows access
 to methods of the genius API.
 
-Functions: 
-1. search()
-2. getArtist()
-3. __str__()
-
+Functions:
+1. getName()
+2. getLyrics()
+3. getArtist()
+4. getYear()
+5. __str__()
 
 """
-# imported libraries
 import lyricsgenius as lg
-from SearchBox import SearchBox
 from abc import override
 
-class ArtistSearchBox(SearchBox):
+class ArtistSearchBox(object):
     
     genius_access_token = "_rDAy259SoA7baRL1ouy2MWdOADsdevMvTvMxo83XXtJJ-ejmfSNvtZSrbqJZrvZ"
     genius_object = lg.Genius(genius_access_token)
 
-    def __init__(self, artist:str) -> None:
+    def __init__(self, name:str, lyrics:str, artist:str, year:str) -> None:
+        self.name = name
+        self.lyrics = lyrics
         self.artist = artist
+        self.year = year
 
-    def search(self):
+    def getName(self):
         pass
-
+    def getLyrics(self):
+        pass
     def getArtist(self):
         pass
-
-    @override
+    def getYear(self):
+        pass
     def __str__(self):
         pass

@@ -3,22 +3,26 @@ DESCRIPTION: LyricSearchBox is a subclass of SearchBox and allows
 the user to search for a song based on lyrics entered into the search box.
 The results will produce the top 10 results when searching the database for a
 song with the specified lyrics.
-AUTHORS: Bruce Tukuafu, Paul Sining Lu, Grace Gresli, Aidan Pearce
+
+AUTHORS: Bruce Tukuafu
+
 LAST UPDATE: 04/14/22
 
 Class Variables: 
 1. genius_access_token -> str(allows access to genius API)
 2. genius_object -> instantiation of genius object which allows access
 to methods of the genius API.
+
 Functions: 
-1. searchByLyrics()
+1. search()
 2. getLyrics()
 3. setLyrics()
 4. __str__()
 """
-
+# imported libraries
 import lyricsgenius as lg
 from SearchBox import SearchBox
+from abc import override
 
 
 class LyricsSearchBox(SearchBox):
@@ -30,7 +34,7 @@ class LyricsSearchBox(SearchBox):
         self.lyrics = lyrics
         
 
-    def searchByLyrics(self) -> None:
+    def search(self) -> None:
         """
         Description: This function prints out the top 10 songs 
         based on the Lyrics entered in by the user.
@@ -62,8 +66,7 @@ class LyricsSearchBox(SearchBox):
         song = self.genius_object.search_song(title=song_title, artist=artist_name)
         return song.lyrics
 
-    def setLyrics(self):
-        pass
-
+    
+    @override
     def __str__(self):
         pass
