@@ -20,7 +20,6 @@ Functions:
 # imported libraries
 import lyricsgenius as lg
 from SearchBox import SearchBox
-from abc import override
 
 class ArtistSearchBox(SearchBox):
     
@@ -36,6 +35,6 @@ class ArtistSearchBox(SearchBox):
     def getArtist(self):
         pass
 
-    @override
+    # override
     def __str__(self):
         pass

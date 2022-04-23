@@ -37,4 +37,4 @@ class SearchBox(object):
         pass
 
     def __str__(self) -> str:
-        return f" This is a General Search Box, and the phrase you entered is {self.name}"
+        return f"This is a General Search Box, and the phrase you entered is {self.name}"

@@ -19,9 +19,9 @@ Functions:
 # imported libraries
 import lyricsgenius as lg
 from SearchBox import SearchBox
-from abc import override
 
-class ArtistSearchBox(SearchBox):
+
+class TitleSearchBox(SearchBox):
     
     genius_access_token = "_rDAy259SoA7baRL1ouy2MWdOADsdevMvTvMxo83XXtJJ-ejmfSNvtZSrbqJZrvZ"
     genius_object = lg.Genius(genius_access_token)
@@ -35,6 +35,6 @@ class ArtistSearchBox(SearchBox):
     def getTitle(self):
         pass
     
-    @override
+    # override
     def __str__(self):
         pass

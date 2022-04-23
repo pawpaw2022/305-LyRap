@@ -19,7 +19,7 @@ Functions:
 
 """
 import lyricsgenius as lg
-from abc import override
+
 
 class ArtistSearchBox(object):
     
@@ -40,5 +40,7 @@ class ArtistSearchBox(object):
         pass
     def getYear(self):
         pass
+
+    # override
     def __str__(self):
         pass

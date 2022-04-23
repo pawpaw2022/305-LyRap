@@ -22,7 +22,7 @@ Functions:
 # imported libraries
 import lyricsgenius as lg
 from SearchBox import SearchBox
-from abc import override
+
 
 
 class LyricsSearchBox(SearchBox):
@@ -50,23 +50,27 @@ class LyricsSearchBox(SearchBox):
         print('\n================================\nTop Results\n================================')
         for i in range(len(top_results_list)):
             lyrics = top_results_list[i]['highlights'][0]['value']
-            # artist_names = top_results_list[i]['result']['artist_names']
             song = top_results_list[i]['result']['full_title']
             print(f'\nSONG: {song}\nLYRICS: "{lyrics}..."\n')
 
-    def getLyrics(self, song_title:str, artist_name:str) -> str:
+    def getLyrics(self, song_title:str, artist_name:str) -> None:
         """
-        Description: This function prints out the Lyrics based on the  
-        based on the Song Title and Artist entered in by the user.
+        Description: This function prints out the Lyrics based on 
+        the Song Title and Artist entered in by the user.
         Parameters: 
         1. title(type:str)-> title of the song.
         2. artist(type:str)-> artist of the song.
         Returns: The Lyrics for the song entered in by the user. 
         """
+        # utilize the lyricsgenius search_song method which requires title & artist name
+        # and it will search the song we need and returns a dictionary with song info.
         song = self.genius_object.search_song(title=song_title, artist=artist_name)
-        return song.lyrics
+        lyrics = song.lyrics
+
+        # print the lyrics of the song from the song object.
+        print("\n"+lyrics)
 
     
-    @override
+    # override
     def __str__(self):
-        pass
+        return f"This is the Lyrics Search Box, and the lyrics you entered are: {self.name}"
