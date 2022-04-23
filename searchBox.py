@@ -17,8 +17,9 @@ Functions:
 from abc import abstractmethod
 
 class SearchBox(object):
-    def __init__(self, name:str) -> None:
+    def __init__(self, name: str) -> None:
         self.name = name
+
 
     @abstractmethod
     def search(self, keyword:str): 
@@ -38,4 +39,3 @@ class SearchBox(object):
 
     def __str__(self) -> str:
         return f" This is a General Search Box, and the phrase you entered is {self.name}"
-
