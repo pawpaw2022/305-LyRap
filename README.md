@@ -9,7 +9,7 @@
 - install lyricsgenius
   - `pip3 install lyricsgenius` for Mac
   - `pip install lyricsgenius` for Window
-- Run `Test_LyRap.py` and interact with the terminal!
+- Run `python3 Test_LyRap.py` and interact with the terminal!
 - Enjoy!
 
 ---
