@@ -3,7 +3,6 @@ DESCRIPTION: SearchBox is a abstract superclass which provides a
 blueprint for subsequent sublclasses that inherit its functionality.
 
 AUTHORS: Paul Sining Lu, Grace Gresli, Aidan Pearce, Bruce Tukuafu
-
 LAST UPDATE: 04/22/22
     
 Functions:
