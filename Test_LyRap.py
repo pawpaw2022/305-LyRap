@@ -1,7 +1,7 @@
 """
 This file is to test all the classes. 
 """
-from searchBox import SearchBox
+from SearchBox import SearchBox
 from LyricsSearchBox import LyricsSearchBox
 from ArtistSearchBox import ArtistSearchBox
 from TitleSearchBox import TitleSearchBox
