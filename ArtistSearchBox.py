@@ -19,14 +19,15 @@ Functions:
 """
 # imported libraries
 import lyricsgenius as lg
-from SearchBox import SearchBox
+from searchBox import SearchBox
+
 
 class ArtistSearchBox(SearchBox):
-    
+
     genius_access_token = "_rDAy259SoA7baRL1ouy2MWdOADsdevMvTvMxo83XXtJJ-ejmfSNvtZSrbqJZrvZ"
     genius_object = lg.Genius(genius_access_token)
 
-    def __init__(self, artist:str) -> None:
+    def __init__(self, artist: str) -> None:
         self.artist = artist
 
     def search(self):
