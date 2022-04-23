@@ -60,7 +60,6 @@ class Test_LyRap(object):
         if choice == '1':
             phrase = input("Please enter the Lyric:\n")
             lyrics = LyricsSearchBox(phrase)
-            # lyrics.searchByLyrics()
             lyrics.search()
 
         if choice == '2':
@@ -73,7 +72,17 @@ class Test_LyRap(object):
 
     def testArtistSearchBox():
         """Runs the tests for our class ArtistSearchBox"""
-        pass
+        print('\n================================\nArtist Search Box\n================================')
+
+        name = input("Please enter the Artist:\n")
+        artist = ArtistSearchBox(name)
+        artist.search()
+
+        print('\n')
+        resp = input(
+            "Do you want to learn more about this artist ? Enter 'y' or 'Y' to confirm: ")
+        if resp.lower() == 'y':
+            artist.getArtist()
 
     def testTitleSearchBox():
         """Runs the tests for our class TitleSearchBox"""
