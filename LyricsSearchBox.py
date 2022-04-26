@@ -21,7 +21,7 @@ Functions:
 """
 # imported libraries
 import lyricsgenius as lg
-from SearchBox import SearchBox
+from searchBox import SearchBox
 
 
 class LyricsSearchBox(SearchBox):

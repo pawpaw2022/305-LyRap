@@ -12,7 +12,7 @@ Functions:
 4. testTitleSearchBox()
 5. testAddSong()
 """
-from SearchBox import SearchBox
+from searchBox import SearchBox
 from LyricsSearchBox import LyricsSearchBox
 from ArtistSearchBox import ArtistSearchBox
 from TitleSearchBox import TitleSearchBox
