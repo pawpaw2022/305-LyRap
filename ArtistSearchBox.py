@@ -41,7 +41,7 @@ class ArtistSearchBox(SearchBox):
         # top results in dictionary form prouduced from lyrics entered by the user
         try:
             results_artist = self.genius_object.search_artist(
-                self.artist, max_songs=10, sort='popularity')
+                self.artist, max_songs=5, sort='popularity')
             self.artistObj = results_artist
         except:
             print(
@@ -56,6 +56,7 @@ class ArtistSearchBox(SearchBox):
         """
         if self.artistObj is None:
             print("Please enter the valid artist name first ...")
+            return
 
         print(f"The artist name is {self.artistObj.name}")
         print(f"You can find more details in this url: \n{self.artistObj.url}")
