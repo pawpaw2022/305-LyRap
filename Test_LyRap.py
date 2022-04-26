@@ -1,5 +1,16 @@
 """
-This file is to test all the classes. 
+Description: This file is to test all the classes required to run
+our LyRap Application.
+
+Authors: Grace Gresli, Aidan Pearce, Paul Sining Lu, Bruce Tukuafu
+Last Update: 04/26/22
+
+Functions:
+1. Demo_LyRap()
+2. testLyricsSearchBox()
+3. testArtistsSearchBox()
+4. testTitleSearchBox()
+5. testAddSong()
 """
 from SearchBox import SearchBox
 from LyricsSearchBox import LyricsSearchBox
