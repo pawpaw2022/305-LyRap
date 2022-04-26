@@ -33,7 +33,7 @@ class ArtistSearchBox(SearchBox):
 
     def search(self):
         """
-        Description: This function prints out the top 10 songs 
+        Description: This function prints out the top 5 songs 
         based on the Artists entered in by the user.
         Parameters: None
         Return: None
