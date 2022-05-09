@@ -28,13 +28,23 @@ class TitleSearchBox(SearchBox):
 
     def __init__(self, title: str) -> None:
         self.title = title
+        self.songObj = None
 
     def search(self):
-        pass
+        try:
+            self.songObj = self.genius_object.search_song(self.title)
+        except:
+            print("Something went wrong. Try again or try searching for a different song.")
+        
 
     def getTitle(self):
-        pass
+        print(f"The song title you searched for is " + self.title +
+                " \nThe artist is " + self.songObj.artist)
+    
+    def showLyrics(self):
+        print(" \nThe lyrics are:\n " + self.songObj.lyrics)
+    
 
     # override
     def __str__(self):
-        pass
+        print(f"This is the title search box and the song you are searching for is " + self.title)

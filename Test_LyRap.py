@@ -97,7 +97,16 @@ class Test_LyRap(object):
 
     def testTitleSearchBox():
         """Runs the tests for our class TitleSearchBox"""
-        pass
+        print('\n================================\nTitle Search Box\n================================')
+
+        songname = input("Please enter the title of a song:\n")
+        song = TitleSearchBox(songname)
+        song.search()
+        song.getTitle()
+        info = input("Would you also like to see the lyrics to this song? If yes, enter 'y' or 'Y'. If no, enter 'n' or 'N': ")
+        if info.lower() == 'y':
+            song.showLyrics()
+        
 
     def testAddSong():
         """Runs the tests for our class AddSong"""
