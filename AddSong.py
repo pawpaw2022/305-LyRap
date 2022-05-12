@@ -1,9 +1,9 @@
 """
 DESCRIPTION:
 
-AUTHORS: Aidan Pearce
+AUTHORS: Grace Gresli
 
-LAST UPDATE:
+LAST UPDATE: 5/12 @4:21
 
 Class Variables: 
 1. genius_access_token -> str(allows access to genius API)
@@ -11,7 +11,7 @@ Class Variables:
 to methods of the genius API.
 
 Functions:
-1. getName()
+1. AddSong()
 2. getLyrics()
 3. getArtist()
 4. getYear()
@@ -26,21 +26,32 @@ class AddSong(object):
     genius_access_token = "_rDAy259SoA7baRL1ouy2MWdOADsdevMvTvMxo83XXtJJ-ejmfSNvtZSrbqJZrvZ"
     genius_object = lg.Genius(genius_access_token)
 
-    def __init__(self, name:str, lyrics:str, artist:str, year:str) -> None:
-        self.name = name
+    def __init__(self, title:str, artist:str, lyrics:str) -> None:
+        self.title = title
         self.lyrics = lyrics
         self.artist = artist
-        self.year = year
-
-    def getName(self):
-        pass
+    def getTitle(self):
+        return self.title
     def getLyrics(self):
-        pass
+        return self.lyrics
     def getArtist(self):
-        pass
-    def getYear(self):
-        pass
+        return self.artist
+    def addSong(self):
+
+
+        try:
+            filename = "newSongLibrary.txt"
+            with open(filename, "w") as f:
+                while True:
+                    try:
+                        f.write("Song Title: " + self.title + "\n" + "Song Artist: " + self.artist + "\n" + "Song Lyrics: "+ self.lyrics + "\n")
+                        f.write("\n")
+                        f.close() #with and as closes the file autamatically
+                    except EOFError:
+                        break
+        except:
+            print("Song Successfuly Added!") 
 
     # override
     def __str__(self):
-        pass
+        return f"This is the Add Song feature, and the Song title you entered is: {self.title}, by: {self.artist}."

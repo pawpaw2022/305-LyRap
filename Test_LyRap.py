@@ -12,11 +12,11 @@ Functions:
 4. testTitleSearchBox()
 5. testAddSong()
 """
-from searchBox import SearchBox
+# from searchBox import SearchBox
 from LyricsSearchBox import LyricsSearchBox
 from ArtistSearchBox import ArtistSearchBox
 from TitleSearchBox import TitleSearchBox
-
+from AddSong import AddSong
 
 class Test_LyRap(object):
     def __init__(self):
@@ -110,7 +110,14 @@ class Test_LyRap(object):
 
     def testAddSong():
         """Runs the tests for our class AddSong"""
-        pass
+        print('\n================================\nAdd Song\n================================')
+
+        title = input("Please enter the Song's Title: ")
+        artist = input("Please enter the Song's Artist: ")
+        lyrics = input("Enter enter the Song's Lyrics: ")
+        
+        song = AddSong(title, artist, lyrics)
+        song.addSong()
 
 
 if __name__ == '__main__':
