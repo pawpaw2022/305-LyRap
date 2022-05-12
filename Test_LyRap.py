@@ -114,7 +114,7 @@ class Test_LyRap(object):
 
         title = input("Please enter the Song's Title: ")
         artist = input("Please enter the Song's Artist: ")
-        lyrics = input("Enter enter the Song's Lyrics: ")
+        lyrics = input("Please enter the Song's Lyrics: ")
         
         song = AddSong(title, artist, lyrics)
         song.addSong()
