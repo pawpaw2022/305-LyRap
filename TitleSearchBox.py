@@ -1,7 +1,7 @@
 """
 DESCRIPTION:
 
-AUTHORS: Grace Gresli
+AUTHORS: Aidan Pearce
 
 LAST UPDATE:
 
@@ -13,6 +13,7 @@ to methods of the genius API.
 Functions: 
 1. search()
 2. getTitle()
+3. showLyrics()
 3. __str__()
 
 """
@@ -31,6 +32,7 @@ class TitleSearchBox(SearchBox):
         self.songObj = None
 
     def search(self):
+        """Description: This function creates a song object from the title entered by the user."""
         try:
             self.songObj = self.genius_object.search_song(self.title)
         except:
@@ -38,10 +40,12 @@ class TitleSearchBox(SearchBox):
         
 
     def getTitle(self):
+        """Description: Prints out the title and artist name for the title entered by the user"""
         print(f"The song title you searched for is " + self.title +
                 " \nThe artist is " + self.songObj.artist)
     
     def showLyrics(self):
+        """Description: Prints out the lyrics of the song object"""
         print(" \nThe lyrics are:\n " + self.songObj.lyrics)
     
 
