@@ -1,6 +1,8 @@
 """
 DESCRIPTION:
-
+Search for a song by entering the title. The program returns the song title and
+artist name and also gives the user an option of would they like to see the lyrics
+to the song as well.
 AUTHORS: Aidan Pearce
 
 LAST UPDATE:
