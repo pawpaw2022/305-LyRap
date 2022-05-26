@@ -1,5 +1,8 @@
 """
-DESCRIPTION:
+DESCRIPTION: Search for a song by entering the name of an artist. The program returns the song title and
+artist name and also gives the user an option of would they like to see the lyrics
+to the song as well.
+In addition, the user can also get more information of the artist by an URL, which will lead the user to a profile page.
 
 AUTHORS: Paul Sining Lu
 
